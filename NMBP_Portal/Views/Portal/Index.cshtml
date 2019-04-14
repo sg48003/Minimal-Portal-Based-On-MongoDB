@@ -1,0 +1,61 @@
+﻿@model IEnumerable<DataAccess.Models.News>
+@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<h1>News</h1>
+@foreach (var item in Model)
+{
+    <div class="w3-row">
+
+        <div class="w3-col m6">
+            <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-container">
+                    @{
+                        string base64 = Convert.ToBase64String(item.Picture);
+                        var imgSrc = $"data:image/gif;base64,{base64}";
+                    }
+                    <img src="@imgSrc" class="img-rounded" style="width: 300px;  margin-top:10%" align="middle" />
+                    <h3><b>@item.Headline</b>
+                    </h3>
+                    <h5>Author : @item.Author</h5>
+                    <hr>
+                </div>
+
+                <div class="w3-container">
+                    <div class="col-lg-12">
+                        @item.Text
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <ul class="list-group">
+                            @if (item.Comments != null)
+                            {
+                                foreach (var comment in item.Comments)
+                                {
+                                    <li>@comment.Timestamp : @comment.Text</li>
+                                }
+                            }
+                        </ul>
+                        @using (Html.BeginForm("AddComment", "Portal", FormMethod.Post))
+                        {
+
+                            <input type="hidden" value="@item.Id" name="id" />
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="comment" placeholder="Comment" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Add comment" class="btn btn-primary" />
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+    </div>
+}
+
+

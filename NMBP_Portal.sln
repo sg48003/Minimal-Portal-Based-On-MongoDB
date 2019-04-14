@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NMBP_Portal", "NMBP_Portal\NMBP_Portal.csproj", "{3D8BDB59-4B15-4218-A30B-771FFBC25E2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{65A3F75D-BF34-45DB-9054-4E8356651AD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D8BDB59-4B15-4218-A30B-771FFBC25E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8BDB59-4B15-4218-A30B-771FFBC25E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8BDB59-4B15-4218-A30B-771FFBC25E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8BDB59-4B15-4218-A30B-771FFBC25E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65A3F75D-BF34-45DB-9054-4E8356651AD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65A3F75D-BF34-45DB-9054-4E8356651AD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A3F75D-BF34-45DB-9054-4E8356651AD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65A3F75D-BF34-45DB-9054-4E8356651AD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C784E63F-5D1D-4DEF-943A-B31C8830EFEB}
+	EndGlobalSection
+EndGlobal
